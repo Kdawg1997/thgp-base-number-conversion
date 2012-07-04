@@ -33,6 +33,39 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+/* converter puts all bases into one equation*/ 
+-(IBAction)converter:(id)sender{ NSString *output;
+    int base; 
+    int I;
+    int input =  [inputText.text intValue];
+    int remainder;
+    int B[20];
+    NSLog (@"Input Text = %@", inputText);
+    
+    NSLog(@"Input Number = %d", input);
+    
+    for (I = 0; I < 20; I = I + 1) {
+        B[I] = 0;
+    }
+    
+    I = 0;
+    
+    while (input > 0) {
+        remainder = input % base; 
+        B[I] = remainder ;
+        input = input / base; 
+        I = I + 1; 
+    }
+    output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
+    NSLog(@"Binary Number =  %d%d%d%d %d%d%d%d %d%d%d%d", B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]);
+    
+    outputText.text = output;
+
+    
+    
+    
+}
+
 /****
  * BINARY NUMBER (Base 2) Conversion
  ****/
@@ -41,12 +74,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -54,10 +87,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 2;
+    while (input > 0) {
+        remainder = input % 2;
         B[I] = remainder ;
-        Q = Q / 2; 
+        input = input / 2; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -74,12 +107,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -87,10 +120,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 3;
+    while (input > 0) {
+        remainder = input % 3;
         B[I] = remainder ;
-        Q = Q / 3; 
+        input = input / 3; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -109,12 +142,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -122,10 +155,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 4;
+    while (input > 0) {
+        remainder = input % 4;
         B[I] = remainder ;
-        Q = Q / 4; 
+        input = input / 4; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -146,12 +179,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -159,10 +192,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 5;
+    while (input > 0) {
+        remainder = input % 5;
         B[I] = remainder ;
-        Q = Q / 5; 
+        input = input / 5; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -181,12 +214,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -194,10 +227,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 6;
+    while (input > 0) {
+        remainder = input % 6;
         B[I] = remainder ;
-        Q = Q / 6; 
+        input = input / 6; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -216,12 +249,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -229,10 +262,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 7;
+    while (input > 0) {
+        remainder = input % 7;
         B[I] = remainder ;
-        Q = Q / 7; 
+        input = input / 7; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -252,12 +285,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -265,10 +298,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 8;
+    while (input > 0) {
+        remainder = input % 8;
         B[I] = remainder ;
-        Q = Q / 8; 
+        input = input / 8; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];
@@ -287,12 +320,12 @@
     NSString *output;
     
     int I;
-    int Q =  [inputText.text intValue];
+    int input =  [inputText.text intValue];
     int remainder;
     int B[20];
     NSLog (@"Input Text = %@", inputText);
     
-    NSLog(@"Input Number = %d", Q);
+    NSLog(@"Input Number = %d", input);
     
     for (I = 0; I < 20; I = I + 1) {
         B[I] = 0;
@@ -300,10 +333,10 @@
     
     I = 0;
     
-    while (Q > 0) {
-        remainder = Q % 9;
+    while (input > 0) {
+        remainder = input % 9;
         B[I] = remainder ;
-        Q = Q / 9; 
+        input = input / 9; 
         I = I + 1;
     }
     output = [NSString stringWithFormat:@"%d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d", B[19], B[18], B[17], B[16], B[15], B[14], B[13], B[12], B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]];

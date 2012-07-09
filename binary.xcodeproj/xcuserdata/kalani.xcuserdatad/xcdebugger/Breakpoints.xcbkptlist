@@ -26,11 +26,11 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "65"
          endingLineNumber = "65"
-         landmarkName = "@implementation thgpViewController"
-         landmarkType = "3">
+         landmarkName = "-converter:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "binary/thgpViewController.m"

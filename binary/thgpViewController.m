@@ -14,7 +14,7 @@
 
 @implementation thgpViewController
 
-@synthesize inputText, outputText;
+@synthesize inputText, outputText, baseText;
 
 - (void)viewDidLoad
 {
@@ -35,7 +35,7 @@
 
 /* converter puts all bases into one equation*/ 
 -(IBAction)converter:(id)sender{ NSString *output;
-    int base; 
+    int base =[baseText.text intValue];
     int I;
     int input =  [inputText.text intValue];
     int remainder;
@@ -343,9 +343,15 @@
     NSLog(@"Binary Number =  %d%d%d%d %d%d%d%d %d%d%d%d", B[11], B[10], B[9], B[8], B[7], B[6], B[5], B[4], B[3], B[2], B[1], B[0]);
     
     outputText.text = output;
+    
 
 
 }
 
+-(IBAction)removeKeyboard
+{ 
+    [inputText resignFirstResponder];
+        
+}
 
 @end

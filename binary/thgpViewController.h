@@ -22,6 +22,7 @@
 
 
 -(IBAction)converter:(id)sender;
+-(IBAction)removeKeyboard;
 
 
 @end

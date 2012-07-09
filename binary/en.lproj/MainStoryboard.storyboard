@@ -19,7 +19,10 @@
                                 <rect key="frame" x="29" y="41" width="105" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="2" eventType="editingDidEndOnExit" id="C9j-z7-CrP"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Binary Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CtJ-7H-VBM">
                                 <rect key="frame" x="97" y="8" width="128" height="21"/>
@@ -45,7 +48,10 @@
                                 <rect key="frame" x="178" y="41" width="105" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="removeKeyboard" destination="2" eventType="editingDidEndOnExit" id="j3l-ct-aF6"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="05P-xW-kA3" userLabel="Button-Convert">
                                 <rect key="frame" x="115" y="91" width="81" height="37"/>
@@ -58,12 +64,16 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="converter:" destination="2" eventType="touchUpInside" id="IGZ-bc-DWu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="inputText" destination="6gN-PS-ZX7" id="FQX-mo-kfW"/>
+                        <outlet property="baseText" destination="HSv-Ug-1ie" id="pIf-rp-Kg3"/>
+                        <outlet property="inputText" destination="6gN-PS-ZX7" id="df1-M3-hQ7"/>
                         <outlet property="outputText" destination="P4n-Rd-Pgd" id="AVp-5h-eDV"/>
                     </connections>
                 </viewController>

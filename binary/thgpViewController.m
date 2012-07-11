@@ -12,7 +12,7 @@
 
 @end
 
-@implementation thgpViewController
+@implementation thgpViewController;
 
 @synthesize inputText, outputText, baseText;
 
@@ -34,8 +34,10 @@
 }
 
 /* converter puts all bases into one equation*/ 
--(IBAction)converter:(id)sender{ NSString *output;
-    int base =[baseText.text intValue];
+-(IBAction)converter:(id)sender 
+{
+    NSString *output;
+    int base = [baseText.text intValue];
     int I;
     int input =  [inputText.text intValue];
     int remainder;

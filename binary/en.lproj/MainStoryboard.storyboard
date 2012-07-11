@@ -81,6 +81,18 @@
             <point key="canvasLocation" x="137" y="76"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="thgpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/thgpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="converter:"/>
+                <relationship kind="action" name="removeKeyboard"/>
+                <relationship kind="outlet" name="baseText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="outputText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
